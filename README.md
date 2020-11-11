@@ -7,3 +7,4 @@
 
 ### TODO
 Make a release so you don't have to install Go
+Measure time to complete request, then use that as latency
