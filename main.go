@@ -10,8 +10,8 @@ import (
 func main() {
 	requester := gorequest.New().Timeout(2 * time.Second)
 	for {
-		requester.Post(fmt.Sprintf(constants.URL_TEMPLATE, constants.TOKEN, 69)).End(printStatus)
-		fmt.Printf("Sent heartbeat: ID %s, Ping %d\n", constants.TOKEN, 69)
+		requester.Post(fmt.Sprintf(constants.URL_TEMPLATE, constants.TOKEN, 0)).End(printStatus)
+		fmt.Printf("Sent heartbeat: ID %s, Ping %d\n", constants.TOKEN, 0)
 		time.Sleep(20 * time.Second)
 	}
 }
