@@ -20,6 +20,7 @@ func main() {
 			panic(err)
 		}
 		stats := pinger.Statistics()
-		requester.Post(fmt.Sprintf(constants.URL_TEMPLATE, constants.TOKEN, stats.AvgRtt / time.Second))
+		requester.Post(fmt.Sprintf(constants.URL_TEMPLATE, constants.TOKEN, stats.AvgRtt / time.Millisecond))
+		fmt.Printf("Sent heartbeat: ID %s, Ping %d\n", constants.TOKEN, stats.AvgRtt / time.Millisecond)
 	}
 }
